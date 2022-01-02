@@ -2089,7 +2089,7 @@ case 'dompet':
 	case 'transfer':
 				if (!q.includes('|')) return  reply('format salah')
                 			const tujuan = q.substring(0, q.indexOf('|') - 1)
-                			const jumblah = q.substring(q.lastIndexOf('|') + 1)
+                			const jumblah = q.substring(q.lastIndexOf('|') + 1)	
                 			if(isNaN(jumblah)) return await reply('jumlah harus berupa angka!!')
                 			if (jumblah < 100 ) return reply(`Minimal Transfer 100`)
                 			if (checkATMuser(sender) < jumblah) return reply(`uang mu tidak mencukupi untuk melakukan transfer`)
@@ -2997,7 +2997,7 @@ case 'bcgif':
 					const vname = alpha.contacts[i] != undefined ? alpha.contacts[i].vname || alpha.contacts[i].notify : undefined
 					ini_list.push({
 					"displayName": 'Owner 𝐒𝐀𝐍𝐒𝐋𝐈𝐍𝐄-𝐁𝐎𝐓',
-					"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `${alpha.user.name}`}\nORG: SUBSCRIBE ZEEONE OFC;\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+					"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `${alpha.user.name}`}\nORG: Rava-Kun;\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 					})
 					}
 					hehe = await alpha.sendMessage(from, {
